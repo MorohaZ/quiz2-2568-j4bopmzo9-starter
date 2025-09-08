@@ -6,6 +6,7 @@ import {
   Select,
   Button,
   Stack,
+  Group
 } from "@mantine/core";
 import { v4 as uuidv4 } from "uuid";
 
@@ -94,9 +95,10 @@ export default function AddFoodModal({
   // console.log(val_number + 100); // 600.0
 
   return (
-    /* Type additional text here. */
-    <>
+
+  
     <Button onClick={handleOpend}>เพิ่มรายการอาหาร<Button/>
+
     <Modal  
       opened={opened}
       onClose={closeModal}
@@ -121,6 +123,7 @@ export default function AddFoodModal({
         onChange = {(val) => setPrice(val ?? null)}
         error={errors.price}
         />
+
         <NumberInput
         label = " จำนวนที่สั่ง"
         placeholder="เช่น 1"
@@ -129,6 +132,7 @@ export default function AddFoodModal({
         onChange = {(val) => setQuantity(val !== null ? Math.trunc(val ) : null)}
         error={errors.quantity}
         />
+        
         <Select
           label=" หมวดหมู่"
           placeholder="เลือกหมวดหมู่"
@@ -137,15 +141,15 @@ export default function AddFoodModal({
           onChange={setCategory}
           error={errors.category}
         />
-        <Group position="right" mt="md">
+        
+        <Group  mt="md">
           <Button variant="default" onClick={() => {resetFrom();closeModal();}}>
             ยกเลิก
             </Button>
           <Button onClick={handleSubmit}>บันทึก</Button>
           </Group>
         </Stack>
-      </Modal>
-    
-    </>
+    </Modal>  
+  </>
   );
 }
