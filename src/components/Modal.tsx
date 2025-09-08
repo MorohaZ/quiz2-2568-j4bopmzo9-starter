@@ -129,7 +129,7 @@ export default function AddFoodModal({
         placeholder="เช่น 1"
         min={1}
         value={quantity}
-        onChange = {(val) => setQuantity(val !== null ? Math.trunc(val ) : null)}
+        onChange = {(val) => setQuantity(val !== null ? Math.trunc(val) : val)}
         error={errors.quantity}
         />
         
