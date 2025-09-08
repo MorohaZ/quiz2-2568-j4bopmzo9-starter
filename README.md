@@ -11,8 +11,8 @@
 หลังจากการ Fork และ Clone repository นี้แล้ว ให้เปิดโฟลเดอร์ด้วย VSCode และรันคำสั่งต่อไปนี้ใน terminal:
 
 ```bash
-pnpm install
-pnpm run dev
+npm install
+npm run dev
 ```
 
 ให้นักศึกษาสร้าง Web application โดยใช้ความรู้เรื่อง React และ Mantine UI library
