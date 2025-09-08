@@ -7,6 +7,7 @@ import {
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconSun, IconMoon } from "@tabler/icons-react";
+import { IoFastFood } from "react-icons/io5";
 
 interface HeaderComponentProps {
   opened: boolean;
@@ -39,8 +40,19 @@ export default function HeaderComponent({
           variant="gradient"
           gradient={{ from: "red", to: "blue", deg: 90 }}
         >
-          TRACKER-APP
+          Tracker APP
         </Text>
+        <Group gap={5}>
+        <ActionIcon
+          variant="filled"
+          color={isDark ? "yellow" : "blue"}
+          onClick={toggleColorScheme}
+          size="lg"
+          aria-label={isDark ? "Light mode" : "Dark mode"}
+        >
+          {isDark ? <IoFastFood size={20} /> : <IoFastFood size={20} />}
+        </ActionIcon>
+      </Group>
       </Group>
       <Group gap={5}>
         <ActionIcon

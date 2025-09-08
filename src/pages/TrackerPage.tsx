@@ -21,7 +21,9 @@ export default function FoodTracker() {
         Food Tracker
       </Title>
       <Button>Add Food Item</Button>
-      {/* Type additional AddFoodModal here. */}
+      {/* Type additional AddFoodModal here. */
+      
+      }
 
       <Divider my="md" />
       {/* Type additional total cost here. */}
